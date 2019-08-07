@@ -28,7 +28,7 @@ pipeline {
 
 
             steps {
-                withMaven(maven : 'maven-project')
+                withMaven(maven : 'maven')
                 {
                     sh 'mvn test'
                 }
@@ -39,7 +39,7 @@ pipeline {
         
         stage ('install Stage') {
             steps {
-                withMaven(maven : 'maven-project')
+                withMaven(maven : 'maven')
                 {
                     sh 'mvn install'
                 }
